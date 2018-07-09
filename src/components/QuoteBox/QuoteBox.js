@@ -21,12 +21,16 @@ class QuoteBox extends React.Component {
   }
 
   getNewQuote() {
-    this.setState({
-      quote: {
-        text: 'A truly rich man is one whose children run into his arms when his hands are empty.',
-        author: 'Unknown'
-      }
-    });
+    fetch('https://talaikis.com/api/quotes/random/')
+      .then(response => response.json())
+      .then(quoteObj => {
+        this.setState({
+          quote: {
+            text: quoteObj.quote,
+            author: quoteObj.author
+          }
+        });
+      });
   }
 
   render() {
