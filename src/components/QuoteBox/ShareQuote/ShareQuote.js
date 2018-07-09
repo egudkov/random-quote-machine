@@ -1,10 +1,12 @@
 import React from 'react';
 
-const ShareQuote = () => {
+const ShareQuote = (props) => {
   return (
-    <button>
+    <a
+      href={'https://twitter.com/intent/tweet?text=' + props.quote + ' - ' + props.author}
+      target="_blank">
       Tweet this quote!
-    </button>
+    </a>
   );
 };
 

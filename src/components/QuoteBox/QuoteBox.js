@@ -37,7 +37,7 @@ class QuoteBox extends React.Component {
       <div>
         <Quote quote={this.state.quote} author={this.state.author} />
         <GetNewQuote handleClick={this.getNewQuote} />
-        <ShareQuote />
+        <ShareQuote quote={this.state.quote} author={this.state.author} />
       </div>
     );
   }
