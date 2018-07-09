@@ -1,10 +1,10 @@
 import React from 'react';
 
-const QuoteAuthor = () => {
+const QuoteAuthor = (props) => {
   return (
-    <div>
-      - Chinese Proverb
-    </div>
+    <p>
+      - {props.quoteAuthor}
+    </p>
   );
 };
 

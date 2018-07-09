@@ -1,9 +1,9 @@
 import React from 'react';
 
-const QuoteText = () => {
+const QuoteText = (props) => {
   return (
     <p>
-      The person who says it cannot be done should not interrupt the person who is doing it.
+      {props.quoteText}
     </p>
   );
 };
