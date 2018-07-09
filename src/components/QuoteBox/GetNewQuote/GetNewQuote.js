@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewQuote = (props) => {
+const GetNewQuote = (props) => {
   return (
     <button onClick={props.handleClick}>
       New quote
@@ -8,4 +8,4 @@ const NewQuote = (props) => {
   );
 };
 
-export default NewQuote;
+export default GetNewQuote;

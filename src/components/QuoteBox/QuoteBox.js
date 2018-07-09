@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Quote from './Quote/Quote';
-import NewQuote from './NewQuote/NewQuote';
+import GetNewQuote from './GetNewQuote/GetNewQuote';
 import ShareQuote from './ShareQuote/ShareQuote';
 
 
@@ -36,7 +36,7 @@ class QuoteBox extends React.Component {
     return (
       <div>
         <Quote quote={this.state.quote} author={this.state.author} />
-        <NewQuote handleClick={this.getNewQuote} />
+        <GetNewQuote handleClick={this.getNewQuote} />
         <ShareQuote />
       </div>
     );
