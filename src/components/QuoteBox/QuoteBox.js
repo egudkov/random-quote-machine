@@ -6,18 +6,40 @@ import NewQuote from './NewQuote/NewQuote';
 import ShareQuote from './ShareQuote/ShareQuote';
 
 
-const QuoteBox = () => {
-  const quoteText = "The person who says it cannot be done should not interrupt the person who is doing it.";
-  const quoteAuthor = "Chinese Proverb";
+class QuoteBox extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div>
-      <QuoteText quoteText={quoteText} />
-      <QuoteAuthor quoteAuthor={quoteAuthor} />
-      <NewQuote />
-      <ShareQuote />
-    </div>
-  );
+    this.state = {
+      quote: {
+        text: 'The person who says it cannot be done should not interrupt the person who is doing it.',
+        author: 'Chinese Proverb'
+      }
+    };
+
+    this.getNewQuote = this.getNewQuote.bind(this);
+  }
+
+  getNewQuote() {
+    this.setState({
+      quote: {
+        text: 'A truly rich man is one whose children run into his arms when his hands are empty.',
+        author: 'Unknown'
+      }
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <QuoteText quoteText={this.state.quote.text} />
+        <QuoteAuthor quoteAuthor={this.state.quote.author} />
+        <NewQuote handleClick={this.getNewQuote} />
+        <ShareQuote />
+      </div>
+    );
+  }
+
 };
 
 export default QuoteBox;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const NewQuote = () => {
+const NewQuote = (props) => {
   return (
-    <button>
+    <button onClick={props.handleClick}>
       New quote
     </button>
   );
