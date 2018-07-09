@@ -10,11 +10,15 @@ class QuoteBox extends React.Component {
     super(props);
 
     this.state = {
-      quote: 'The person who says it cannot be done should not interrupt the person who is doing it.',
-      author: 'Chinese Proverb'
+      quote: '',
+      author: ''
     };
 
     this.getNewQuote = this.getNewQuote.bind(this);
+  }
+
+  componentDidMount() {
+    this.getNewQuote();
   }
 
   getNewQuote() {
