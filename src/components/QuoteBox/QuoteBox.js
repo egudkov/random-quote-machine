@@ -34,7 +34,12 @@ class QuoteBox extends React.Component {
 
   render() {
     const styles = {
-      width: "450px"
+      width: "450px",
+      backgroundColor: "white",
+      boxSizing: "border-box",
+      padding: "20px",
+      border: "1px solid grey",
+      borderRadius: "10px"
     };
 
     return (
