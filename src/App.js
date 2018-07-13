@@ -5,8 +5,17 @@ import QuoteBox from './components/QuoteBox/QuoteBox';
 
 class App extends Component {
   render() {
+    const styles = {
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    };
     return (
-      <QuoteBox />
+      <div style={styles}>
+        <QuoteBox />
+      </div>
+
     );
   }
 }

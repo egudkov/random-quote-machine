@@ -33,8 +33,12 @@ class QuoteBox extends React.Component {
   }
 
   render() {
+    const styles = {
+      width: "450px"
+    };
+
     return (
-      <div>
+      <div style={styles}>
         <Quote quote={this.state.quote} author={this.state.author} />
         <GetNewQuote handleClick={this.getNewQuote} />
         <ShareQuote quote={this.state.quote} author={this.state.author} />
